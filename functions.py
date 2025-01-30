@@ -305,15 +305,15 @@ print(mt.factorial(6))
 
 #Example1
 #Import Module from package
-from mypckg import mod_1
-from mypckg import mod_2
+from mypckg_demo import mod_1
+from mypckg_demo import mod_2
 mod_1.gfg()
 res = mod_2.sum(1, 2)
 print(res)
 #Example2
 #Import Specific function from the module
-from mypckg.mod_1 import gfg
-from mypckg.mod_2 import sum
+from mypckg_demo.mod_1 import gfg
+from mypckg_demo.mod_2 import sum
 gfg()
 res = sum(1, 2)
 print(res)
