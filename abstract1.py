@@ -1,4 +1,4 @@
-from oops_in_python import *  #we are importing  * from 'oops_in_python' to make object of those subclasses
+from oops_in_python import Rectangle  # type: ignore # Ensure the module 'oops_in_python' is in the same directory or in the Python path
 # Create a rectangle object.
 rectangle = Rectangle(5, 10)
 
