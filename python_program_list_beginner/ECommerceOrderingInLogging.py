@@ -25,19 +25,20 @@ class OrderSystem:
         """Place an order for a specific item."""
         if item not in inventory:
             logging.error(f"Order failed: {item} is not available in inventory.")
-            raise ValueError(f"Item '{item}' not found in inventory.")
+            return f"Error: Item '{item}' not found in inventory."
 
         if quantity <= 0:
             logging.warning(f"Invalid order quantity: {quantity} for item {item}.")
-            raise ValueError("Quantity must be greater than zero.")
+            return "Error: Quantity must be greater than zero."
 
         if inventory[item] < quantity:
             logging.error(f"Order failed: Insufficient stock for {item}. Requested: {quantity}, Available: {inventory[item]}.")
-            raise ValueError("Insufficient stock.")
+            return "Error: Insufficient stock."
 
         # Deduct inventory
         inventory[item] -= quantity
         logging.info(f"Order placed successfully: {quantity} {item}(s). Remaining stock: {inventory[item]}.")
+        return f"Success: Ordered {quantity} {item}(s). Remaining stock: {inventory[item]}."
 
     @staticmethod
     def check_inventory():
@@ -48,27 +49,28 @@ class OrderSystem:
 
 # Main program to demonstrate the order system
 if __name__ == "__main__":
-    try:
-        # Log system initialization
-        logging.info("E-commerce Order Processing System started.")
+    logging.info("E-commerce Order Processing System started.")
 
-        # Place some orders
-        OrderSystem.place_order("Laptop", 2)  # Successful order
-        OrderSystem.place_order("Phone", 25)  # Insufficient stock
-        OrderSystem.place_order("Tablet", 1)  # Item not in inventory
+    # List of orders to process
+    orders = [
+        ("Laptop", 2),
+        ("Phone", 25),  # Will fail due to insufficient stock
+        ("Tablet", 1)   # Will fail because the item doesn't exist
+    ]
 
-    except Exception as e:
-        logging.exception(f"An error occurred: {e}")
+    # Process each order
+    for item, qty in orders:
+        result = OrderSystem.place_order(item, qty)
+        print(result)  # Display the result of each order
 
-    finally:
-        # Log the inventory status
-        logging.info("Final inventory status:")
-        final_inventory = OrderSystem.check_inventory()
-        for item, qty in final_inventory.items():
-            logging.info(f"{item}: {qty}")
+    # Log the final inventory status
+    logging.info("Final inventory status:")
+    final_inventory = OrderSystem.check_inventory()
+    for item, qty in final_inventory.items():
+        logging.info(f"{item}: {qty}")
 
-        # Display log file content (optional for this example)
-        if os.path.exists(LOG_FILE):
-            print("\n--- Log File Content ---")
-            with open(LOG_FILE, 'r') as log_file:
-                print(log_file.read())
+    # Display log file content (optional)
+    if os.path.exists(LOG_FILE):
+        print("\n--- Log File Content ---")
+        with open(LOG_FILE, 'r') as log_file:
+            print(log_file.read())

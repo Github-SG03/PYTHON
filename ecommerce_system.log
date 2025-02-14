@@ -1,0 +1,110 @@
+2025-02-14 15:01:56 - INFO - E-commerce Order Processing System started.
+2025-02-14 15:01:56 - INFO - Order placed successfully: 2 Laptop(s). Remaining stock: 8.
+2025-02-14 15:01:56 - ERROR - Order failed: Insufficient stock for Phone. Requested: 25, Available: 20.
+2025-02-14 15:01:56 - ERROR - An error occurred: Insufficient stock.
+Traceback (most recent call last):
+  File "c:\Users\Shivam Gupta\OneDrive\Documents\Shivam_Developement\PYTHON\python_program_list_beginner\ECommerceOrderingInLogging.py", line 57, in <module>
+    OrderSystem.place_order("Phone", 25)  # Insufficient stock
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Shivam Gupta\OneDrive\Documents\Shivam_Developement\PYTHON\python_program_list_beginner\ECommerceOrderingInLogging.py", line 36, in place_order
+    raise ValueError("Insufficient stock.")
+ValueError: Insufficient stock.
+2025-02-14 15:01:56 - INFO - Final inventory status:
+2025-02-14 15:01:56 - DEBUG - Checking inventory...
+2025-02-14 15:01:56 - INFO - Laptop: 8
+2025-02-14 15:01:56 - INFO - Phone: 20
+2025-02-14 15:01:56 - INFO - Headphones: 50
+2025-02-14 15:02:13 - INFO - E-commerce Order Processing System started.
+2025-02-14 15:02:13 - INFO - Order placed successfully: 2 Laptop(s). Remaining stock: 8.
+2025-02-14 15:02:13 - ERROR - Order failed: Insufficient stock for Phone. Requested: 25, Available: 20.
+2025-02-14 15:02:13 - ERROR - An error occurred: Insufficient stock.
+Traceback (most recent call last):
+  File "c:\Users\Shivam Gupta\OneDrive\Documents\Shivam_Developement\PYTHON\python_program_list_beginner\ECommerceOrderingInLogging.py", line 57, in <module>
+    OrderSystem.place_order("Phone", 25)  # Insufficient stock
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Shivam Gupta\OneDrive\Documents\Shivam_Developement\PYTHON\python_program_list_beginner\ECommerceOrderingInLogging.py", line 36, in place_order
+    raise ValueError("Insufficient stock.")
+ValueError: Insufficient stock.
+2025-02-14 15:02:13 - INFO - Final inventory status:
+2025-02-14 15:02:13 - DEBUG - Checking inventory...
+2025-02-14 15:02:13 - INFO - Laptop: 8
+2025-02-14 15:02:13 - INFO - Phone: 20
+2025-02-14 15:02:13 - INFO - Headphones: 50
+2025-02-14 15:03:24 - INFO - E-commerce Order Processing System started.
+2025-02-14 15:03:24 - INFO - Order placed successfully: 2 Laptop(s). Remaining stock: 8.
+2025-02-14 15:03:24 - INFO - Order placed successfully: 18 Phone(s). Remaining stock: 2.
+2025-02-14 15:03:24 - ERROR - Order failed: Tablet is not available in inventory.
+2025-02-14 15:03:24 - ERROR - An error occurred: Item 'Tablet' not found in inventory.
+Traceback (most recent call last):
+  File "c:\Users\Shivam Gupta\OneDrive\Documents\Shivam_Developement\PYTHON\python_program_list_beginner\ECommerceOrderingInLogging.py", line 58, in <module>
+    OrderSystem.place_order("Tablet", 1)  # Item not in inventory
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Shivam Gupta\OneDrive\Documents\Shivam_Developement\PYTHON\python_program_list_beginner\ECommerceOrderingInLogging.py", line 28, in place_order
+    raise ValueError(f"Item '{item}' not found in inventory.")
+ValueError: Item 'Tablet' not found in inventory.
+2025-02-14 15:03:24 - INFO - Final inventory status:
+2025-02-14 15:03:24 - DEBUG - Checking inventory...
+2025-02-14 15:03:24 - INFO - Laptop: 8
+2025-02-14 15:03:24 - INFO - Phone: 2
+2025-02-14 15:03:24 - INFO - Headphones: 50
+2025-02-14 15:03:38 - INFO - E-commerce Order Processing System started.
+2025-02-14 15:03:38 - INFO - Order placed successfully: 2 Laptop(s). Remaining stock: 8.
+2025-02-14 15:03:38 - INFO - Order placed successfully: 18 Phone(s). Remaining stock: 2.
+2025-02-14 15:03:38 - ERROR - Order failed: Tablet is not available in inventory.
+2025-02-14 15:03:38 - ERROR - An error occurred: Item 'Tablet' not found in inventory.
+Traceback (most recent call last):
+  File "c:\Users\Shivam Gupta\OneDrive\Documents\Shivam_Developement\PYTHON\python_program_list_beginner\ECommerceOrderingInLogging.py", line 58, in <module>
+    OrderSystem.place_order("Tablet", 1)  # Item not in inventory
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Shivam Gupta\OneDrive\Documents\Shivam_Developement\PYTHON\python_program_list_beginner\ECommerceOrderingInLogging.py", line 28, in place_order
+    raise ValueError(f"Item '{item}' not found in inventory.")
+ValueError: Item 'Tablet' not found in inventory.
+2025-02-14 15:03:38 - INFO - Final inventory status:
+2025-02-14 15:03:38 - DEBUG - Checking inventory...
+2025-02-14 15:03:38 - INFO - Laptop: 8
+2025-02-14 15:03:38 - INFO - Phone: 2
+2025-02-14 15:03:38 - INFO - Headphones: 50
+2025-02-14 15:03:58 - INFO - E-commerce Order Processing System started.
+2025-02-14 15:03:58 - INFO - Order placed successfully: 2 Laptop(s). Remaining stock: 8.
+2025-02-14 15:03:58 - INFO - Order placed successfully: 18 Phone(s). Remaining stock: 2.
+2025-02-14 15:03:58 - ERROR - Order failed: Tablet is not available in inventory.
+2025-02-14 15:03:58 - ERROR - An error occurred: Item 'Tablet' not found in inventory.
+Traceback (most recent call last):
+  File "c:\Users\Shivam Gupta\OneDrive\Documents\Shivam_Developement\PYTHON\python_program_list_beginner\ECommerceOrderingInLogging.py", line 58, in <module>
+    OrderSystem.place_order("Tablet", 1)  # Item not in inventory
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Shivam Gupta\OneDrive\Documents\Shivam_Developement\PYTHON\python_program_list_beginner\ECommerceOrderingInLogging.py", line 28, in place_order
+    raise ValueError(f"Item '{item}' not found in inventory.")
+ValueError: Item 'Tablet' not found in inventory.
+2025-02-14 15:03:58 - INFO - Final inventory status:
+2025-02-14 15:03:58 - DEBUG - Checking inventory...
+2025-02-14 15:03:58 - INFO - Laptop: 8
+2025-02-14 15:03:58 - INFO - Phone: 2
+2025-02-14 15:03:58 - INFO - Headphones: 50
+2025-02-14 15:08:07 - INFO - E-commerce Order Processing System started.
+2025-02-14 15:08:07 - INFO - Order placed successfully: 2 Laptop(s). Remaining stock: 8.
+2025-02-14 15:08:07 - ERROR - Order failed: Insufficient stock for Phone. Requested: 25, Available: 20.
+2025-02-14 15:08:07 - ERROR - Order failed: Tablet is not available in inventory.
+2025-02-14 15:08:07 - INFO - Final inventory status:
+2025-02-14 15:08:07 - DEBUG - Checking inventory...
+2025-02-14 15:08:07 - INFO - Laptop: 8
+2025-02-14 15:08:07 - INFO - Phone: 20
+2025-02-14 15:08:07 - INFO - Headphones: 50
+2025-02-14 15:08:24 - INFO - E-commerce Order Processing System started.
+2025-02-14 15:08:24 - INFO - Order placed successfully: 2 Laptop(s). Remaining stock: 8.
+2025-02-14 15:08:24 - ERROR - Order failed: Insufficient stock for Phone. Requested: 25, Available: 20.
+2025-02-14 15:08:24 - ERROR - Order failed: Tablet is not available in inventory.
+2025-02-14 15:08:24 - INFO - Final inventory status:
+2025-02-14 15:08:24 - DEBUG - Checking inventory...
+2025-02-14 15:08:24 - INFO - Laptop: 8
+2025-02-14 15:08:24 - INFO - Phone: 20
+2025-02-14 15:08:24 - INFO - Headphones: 50
+2025-02-14 15:08:49 - INFO - E-commerce Order Processing System started.
+2025-02-14 15:08:49 - INFO - Order placed successfully: 2 Laptop(s). Remaining stock: 8.
+2025-02-14 15:08:49 - ERROR - Order failed: Insufficient stock for Phone. Requested: 25, Available: 20.
+2025-02-14 15:08:49 - ERROR - Order failed: Tablet is not available in inventory.
+2025-02-14 15:08:49 - INFO - Final inventory status:
+2025-02-14 15:08:49 - DEBUG - Checking inventory...
+2025-02-14 15:08:49 - INFO - Laptop: 8
+2025-02-14 15:08:49 - INFO - Phone: 20
+2025-02-14 15:08:49 - INFO - Headphones: 50

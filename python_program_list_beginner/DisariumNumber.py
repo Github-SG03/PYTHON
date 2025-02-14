@@ -25,14 +25,14 @@ def is_disarium(n):
     Returns:
     bool: True if the number is a Disarium number, False otherwise.
     """
-    count_digits = count_digits(n)
+    count_digit = count_digits(n)
     sum_of_powers = 0
     x = n
     while x:
         r = x % 10
-        sum_of_powers += r ** count_digits
+        sum_of_powers += r ** count_digit
         x = x // 10
-        count_digits -= 1
+        count_digit -= 1
     return sum_of_powers == n
 
 # Example usage
