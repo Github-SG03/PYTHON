@@ -1,4 +1,3 @@
-
 import pytest
 
 @pytest.fixture()
@@ -9,7 +8,6 @@ def welcome_message():
 def test_welcome_message(welcome_message):
     """Test if the fixture returns the correct welcome message."""
     assert welcome_message == "Welcome to our application!"
-
 
 
 
