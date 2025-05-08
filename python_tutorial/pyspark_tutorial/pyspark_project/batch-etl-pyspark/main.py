@@ -8,7 +8,7 @@ def main():
     spark = get_spark_session()
 
     # Extract data
-    df = extract_data("data/raw/input.csv")
+    df = extract_data("data/raw/customers.csv")
 
     # Transform data
     cleaned_df = clean_data(df)
