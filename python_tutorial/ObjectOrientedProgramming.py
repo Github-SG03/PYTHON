@@ -832,7 +832,7 @@ print(area_of_rectangle)
 #implementaion class for Abstract Base Class 'Shape'
 #note: we have to define abstract methods in subclasses otherwise it also becomes abstract class
 import math
-from abstract_class import Shape
+from abstract_class import Shape # type: ignore
 class Rectangle(Shape):
   """Concrete class for rectangles."""
 

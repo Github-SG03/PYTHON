@@ -1,5 +1,5 @@
 import unittest
-from ecommerce_system import Inventory, OrderSystem
+from PYTHON.python_tutorial.ECommerce import Inventory, OrderSystem
 
 
 class TestInventory(unittest.TestCase):

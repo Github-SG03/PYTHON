@@ -242,7 +242,7 @@ print(operator(add,20))
 
 #Decorator example_2
 #function_in_python_tutorial.py
-from debugly import debug
+from Debugly import debug
 
 @debug                      #here each function is decorated but hides implementation detail
 def add(x,y): 
@@ -275,8 +275,8 @@ def subtract(x, y):
   
 """
 #importing module calc.py
-import python_tutorial.calculator as calculator#importing module 'calc.py'
-print(calculator.add(10, 2))
+import PYTHON.python_tutorial.Module as Module#importing module 'calc.py'
+print(Module.add(10, 2))
 
 
 #Importing specific attributes from the module
