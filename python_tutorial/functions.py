@@ -1,4 +1,4 @@
-############################################Function in Python####################################################
+############################################Function in python_tutorial####################################################
 
 
 #Example1 of a User-Defined Function
@@ -19,7 +19,7 @@ def a_function( string ):
     return len(string)  
 #Calling the function we defined  
 print( "Length of the string Functions is: ", a_function( "Functions" ) )  
-print( "Length of the string Python is: ", a_function( "Python" ) ) 
+print( "Length of the string python_tutorial is: ", a_function( "python_tutorial" ) ) 
 
 #Example3  of a User-Defined Function
 
@@ -59,14 +59,14 @@ def function( num1, num2 ):
    print("num2 is: ", num2)  
 print( "Without using keyword",function( 50, 30)  )  # Calling function and passing arguments without using keyword  
 print( "With using keyword",function( num2 = 50, num1 = 30))# Calling function and passing arguments using keyword  
-#3Variable-Length Arguments(We can use special characters in Python functions to pass as many arguments as we want in a function. There are two types of characters that we can use for this purpose:1.*args,2.**Kwargs)
+#3Variable-Length Arguments(We can use special characters in python_tutorial functions to pass as many arguments as we want in a function. There are two types of characters that we can use for this purpose:1.*args,2.**Kwargs)
 #3.1*args(non-keyword arguments)
 def function( *args_list ):  
    ans = []  
    for l in args_list:  
        ans.append( l.upper() ) 
    return ans  
-object = function('Python', 'Functions', 'tutorial')# Passing args arguments   
+object = function('python_tutorial', 'Functions', 'tutorial')# Passing args arguments   
 print( object )  
 #3.2**kwargs(keywords arguments)
 def function( **kargs_list ):  
@@ -74,7 +74,7 @@ def function( **kargs_list ):
     for key, value in kargs_list.items(): 
         ans.extend([key, value])  
     return ans  
-object = function(First = "Python", Second = "Functions", Third = "Tutorial") # Paasing kwargs arguments  
+object = function(First = "python_tutorial", Second = "Functions", Third = "Tutorial") # Paasing kwargs arguments  
 print(object) 
 #4Required Arguments()
 def function( num1, num2 ): 
@@ -104,9 +104,9 @@ print( "Without return statement:",square( 39 ) )# Calling function and passing 
 
 ###################################################################################################################################################
 
-##Python Function within Another Function(Nested function)
+##python_tutorial Function within Another Function(Nested function)
 def function1():  
-  string = 'Python functions tutorial'         
+  string = 'python_tutorial functions tutorial'         
   def function2():  
     print( string )  
   function2()  
@@ -174,7 +174,7 @@ print("higher_ord_func:",higher_ord_func(20,lambda x:x*x))
 
 #########################################################################################################################
 
-#Recursion in python(function calling itself)
+#Recursion in python_tutorial(function calling itself)
 #Example 1: A Fibonacci sequence is the integer sequence of 0, 1, 1, 2, 3, 5, 8…
 # Program to print the fibonacci series upto n_terms
 def recursive_fibonacci(n):
@@ -241,7 +241,7 @@ print(operator(add,20))
  
 
 #Decorator example_2
-#function_in_python.py
+#function_in_python_tutorial.py
 from debugly import debug
 
 @debug                      #here each function is decorated but hides implementation detail
@@ -266,7 +266,7 @@ def div(x,y):
 
  
 #####################################################################################################################################
-#module in python( a simple module, calc.py)
+#module in python_tutorial( a simple module, calc.py)
 """
 def add(x, y):
 	return (x+y)         #this code/module is available in 'calc.py' & can be imported in this file 'functions.py' & can be imported using the 'import'
@@ -275,8 +275,8 @@ def subtract(x, y):
   
 """
 #importing module calc.py
-import calc#importing module 'calc.py'
-print(calc.add(10, 2))
+import python_tutorial.calculator as calculator#importing module 'calc.py'
+print(calculator.add(10, 2))
 
 
 #Importing specific attributes from the module
@@ -293,7 +293,7 @@ print(sys.path)
 
 
 
-#Renaming the Python module
+#Renaming the python_tutorial module
 # importing sqrt() and factorial from the
 # module math
 import math as mt
@@ -305,15 +305,15 @@ print(mt.factorial(6))
 
 #Example1
 #Import Module from package
-from mypckg_demo import mod_1
-from mypckg_demo import mod_2
+from python_tutorial import mod_1
+from python_tutorial import mod_2
 mod_1.gfg()
 res = mod_2.sum(1, 2)
 print(res)
 #Example2
 #Import Specific function from the module
-from mypckg_demo.mod_1 import gfg
-from mypckg_demo.mod_2 import sum
+from python_tutorial.mod_1 import gfg
+from python_tutorial.mod_2 import sum
 gfg()
 res = sum(1, 2)
 print(res)
@@ -350,13 +350,13 @@ print(random.randint(0, 5))
 print(random.random())
 # random number between 0 and 100
 print(random.random() * 100)
-List = [1, 4, True, 800, "python", 27, "hello"]
+List = [1, 4, True, 800, "python_tutorial", 27, "hello"]
 # using choice function in random module for choosing a random element from a set such as a list
 print(random.choice(List))
 
 
 ############################################################################################################################################
-#Namespace in python(Namespaces are used to store and organize Python objects, such as variables, functions, and classes. They help to avoid naming conflicts and make it easier to access and manage objects in a program.)
+#Namespace in python_tutorial(Namespaces are used to store and organize python_tutorial objects, such as variables, functions, and classes. They help to avoid naming conflicts and make it easier to access and manage objects in a program.)
 var1 = 5#var1 is in the local namespace
 def some_func():
   var2 = 6#var2 is in the local namespace
