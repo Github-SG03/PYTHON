@@ -1,0 +1,16 @@
+2025-05-08 20:44:53,890 - INFO - Extracting data...
+2025-05-08 20:45:04,276 - INFO - Extracted 5 rows.
+2025-05-08 20:45:04,277 - INFO - Cleaning data...
+2025-05-08 20:45:04,467 - INFO - Cleaned data: 3 rows remain.
+2025-05-08 20:45:04,467 - INFO - Saving data to data/output/output.csv
+2025-05-08 20:45:04,773 - INFO - Data saved.
+2025-05-08 20:45:04,774 - INFO - \u2705 ETL completed.
+2025-05-08 20:45:04,787 - INFO - Closing down clientserver connection
+2025-05-08 20:46:06,165 - INFO - Extracting data...
+2025-05-08 20:46:15,550 - INFO - Extracted 5 rows.
+2025-05-08 20:46:15,550 - INFO - Cleaning data...
+2025-05-08 20:46:15,739 - INFO - Cleaned data: 3 rows remain.
+2025-05-08 20:46:15,739 - INFO - Saving data to data/output/output.csv
+2025-05-08 20:46:16,084 - INFO - Data saved.
+2025-05-08 20:46:16,084 - INFO - \u2705 ETL completed.
+2025-05-08 20:46:16,095 - INFO - Closing down clientserver connection

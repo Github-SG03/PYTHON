@@ -1,5 +1,7 @@
-from pyspark.sql.functions import col
+from src.logger import logger
 
 def clean_data(df):
-    # Example: filter active customers
-    return df.filter(col("status") == "active")
+    logger.info("Cleaning data...")
+    cleaned_df = df.dropna()
+    logger.info(f"Cleaned data: {cleaned_df.count()} rows remain.")
+    return cleaned_df

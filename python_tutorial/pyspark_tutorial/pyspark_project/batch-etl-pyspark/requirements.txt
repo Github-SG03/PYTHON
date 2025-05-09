@@ -1,3 +1,5 @@
-pyspark==3.5.0
-jupyter
+pyspark
+python-dotenv
+apache-airflow
+pytest
 pandas
