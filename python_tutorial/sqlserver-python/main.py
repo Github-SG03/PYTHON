@@ -1,5 +1,6 @@
 import logging, sys
-from connect import create_connection
+from procedure import count_customer_by_email_domain
+
 
 # config logging to console
 logging.basicConfig(
@@ -9,8 +10,5 @@ logging.basicConfig(
     level=logging.DEBUG
 )
 
-# create a database connection
-conn = create_connection()
-if conn:
-    logging.info('Connected to the SQL Server database successfully.')
-    conn.close()
+customer_count = count_customer_by_email_domain('gmail.com')
+logging.info(customer_count)
