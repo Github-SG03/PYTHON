@@ -22,7 +22,7 @@ print("Tuple with different data types: ", mixed_tuple)
 
 #creating a tuple with nested sequence type
 # Creating a nested tuple  
-nested_tuple = ("Python", [1,2,3,4],{4: 5, 6: 2, 8:2}, (5, 3, 5, 6))  
+nested_tuple = ("Python", [1,2,3,4],{4: 5, 6: 2, 8:2}, (5, 3, 5, 6),{"Ravi","Suraj"})  
 print("A nested tuple: ", nested_tuple)  
 
 
@@ -59,8 +59,7 @@ tuple_ = ("Python", "Tuple", "Ordered", "Immutable", "Collection", "Ordered")
 print(tuple_.count('Ordered'))    
 # Getting the index of an element using the index() method  
 print(tuple_.index('Ordered')) # This method returns index of the first occurrence of the element  
-
-
+print(tuple_.__doc__)
 
 #Tuple built-in function
 l = [1,-3,0,2,4]
@@ -77,6 +76,8 @@ obj1 = enumerate(l1)
 obj2 = enumerate(s1)
 print ("Return type:", type(obj1))
 print (list(enumerate(l1)))
+l3=dict(enumerate(l1))
+print(l3)
  
  
  

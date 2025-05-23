@@ -62,3 +62,39 @@ def count_customer_by_email_domain(domain: str) -> int:
     finally:
         if conn:
             conn.close() # Ensure connection is closed after use
+
+
+
+
+
+
+
+
+"""
+-- Check if the procedure already exists. If so, drop it.
+IF OBJECT_ID('dbo.CountCustomerByEmailDomain', 'P') IS NOT NULL
+    DROP PROCEDURE dbo.CountCustomerByEmailDomain;
+GO
+
+-- Now, create the procedure
+CREATE PROCEDURE dbo.CountCustomerByEmailDomain
+    @Domain NVARCHAR(255),
+    @Count INT OUTPUT -- This specifies it's an OUTPUT parameter
+AS
+BEGIN
+    -- Assign the count to the output parameter
+    SELECT @Count = COUNT(*) FROM Customers WHERE Email LIKE '%' + @Domain;
+
+    -- *** ADD THIS LINE ***
+    -- Return the output parameter as a result set, which Python can easily fetch.
+    SELECT @Count AS CustomerCount;
+END;
+GO
+
+--How to test this SP in SSMS (this test script will also work the same way):
+DECLARE @ResultCount INT;
+EXEC dbo.CountCustomerByEmailDomain @Domain = '@example.com', @Count = @ResultCount OUTPUT;
+SELECT @ResultCount AS CustomerCount;
+
+
+"""

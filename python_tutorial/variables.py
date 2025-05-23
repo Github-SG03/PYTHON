@@ -101,7 +101,8 @@ def mainFunction():
  print(x) # printing a global variable   
  # modifying a global variable  
  x = 'Welcome To Javatpoint'  
- print(x)     
+ print(x)  
+    
 mainFunction()  
 print(x) 
 

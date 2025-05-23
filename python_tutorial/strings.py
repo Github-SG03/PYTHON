@@ -92,7 +92,7 @@ print(r'C://python37') # prints C://python37 as it is written
 print("The string str : %s"%(str)) # prints The string str : Hello
 
 #another example2   
-Integer = 10;    
+Integer = 10    
 Float = 1.290    
 String = "meEruT" 
 string="simmi"   
@@ -109,38 +109,40 @@ print(String.isspace())# returms True if string have " "
 print(String.isnumeric())# returms true if string contains only numeric charater
 print(String.isdigit())#It returns true if all the characters are digits and there is at least one character, otherwise False.
 print("shivam is {} hard for examinatiom".format("working"))
+print(String.capitalize)
+print(String.isalpha)
+print(String.isalnum)
+print(String.isprintable())
+print(String.isprintable())
+print(String.isidentifier())
+print(String.isascii)
+print(String.isnumeric())
+print(String.index("sim"))
 print(String.count('e',0,5)) # 1 occurence of 'e' in 'meEruT'
 print(string.find('m',0,5))# 2nd location occurence of 'm' in 'simmi'
 print(string.endswith('i',0,2))
-# Python join() method example    
-# Variable declaration    
-S1 = ""   # string    
-list = ['J','a','v','a','t','p','o','i','n','t']    # iterable    
-# Calling function    
-S2 = S1.join(list)    
-# Displaying result    
-print(S2) 
+print(String.startswith('s',0,2))
+print(String.strip())
+print(String.lstrip())
+print(String.ljust("&"))
+print(String.center("$"))
+print(String.casefold())
+print(String.encode())
+print(String.removesuffix())
+print(String.splitlines())
+print(String.expandtabs())
+print(String.translate(string))
+print(String.replace(String,"DeElhi"))
+print("-".join("shivam"))
+print(String.partition("l"))
+print(String.split("E"))
+print(String.isdecimal())
+print(String.__sizeof__())
+print(String.__doc__())
 
-# Python partition() method example  
-# Variable declaration  
-str0 = "Java is a programming language"  
-# Calling function  
-str2 = str0.partition("is")  
-# Displaying result  
-print(str2)  
+ 
 
-#Simple Python program to understand the replace() method with example    
-# Variable declaration    
-strrr = "Apple is a fruit"    
-# Here, we are calling the function    
-strrrr= strrr.replace(strrr,"Tomato is also a fruit")    
-# Here, we are displaying the result    
-print(strrrr)
 
-#string split method
-string = "Python is awesome"  
-result = string.split("o")  
-print(result)  
 
 
 
