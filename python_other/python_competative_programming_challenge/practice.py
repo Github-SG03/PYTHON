@@ -301,6 +301,211 @@ class Solution:
         for i in range(len(s)-1,-1,-1):
             rev_string=rev_string+s[i]
         return rev_string
+#######################################################Day9#####################################################################
+#[Problem Statement]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbGJGMmNCcDc5ZHdLNm0yUnZDY2pBZ25NTV85Z3xBQ3Jtc0tucGdYM0dzZkRha0M4M2gtR2JoWjJKTFRPSWhWNXluTWhfZHIxVWlyRkItYmJCOGg4cHQ2dS1EVnI1SVhQdjZZaF9hZUUtQ1o5YkU0UkY3N1dxM3F1R3o5UFduZkl3ZTd0REtMTkllSmxmaTFVSXJpSQ&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Fperfect-arrays4645%2F0&v=EQzdB1MuEs4
 
+
+#[Assignemnts]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbkhGbWZJRDJrd1VyN01vamJtU2VCdExiNnh1Z3xBQ3Jtc0trOVZnaGtuUWpLRDdCTWowX2NIZTBydmRGRHNXVmRyODRJWFhJeU0xQzBydElMRGNscjhBbDdjeTdkdmdaWm4zWHUzeVBrOFBoelR2eVZlZnFrejVvTUJjZ3lhcEVzbmdFbWdTblloejZUSmRxUTJfSQ&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Fsearch-an-element-in-an-array-1587115621%2F0&v=EQzdB1MuEs4
+
+########################################################Day10#####################################################################
+#[Problem Statement]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa2J3eTBON0JpQ3Y3VXhYVjU3SUhfWHVpU1g1d3xBQ3Jtc0tsaFItVGV5SW5lem5IczFEUDlpbG8weWRIS2VGOUZqZXRra3ZXeDBxWWhvZTdWZ0EtbjdzVWN1NjZ1VUxwd256XzRKMG5uYnp6RF9JUlNuVjF1RlpESE50WDZsOEhtRWFNQVdFbXRqblV1MkFkRlhFcw&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Frepeated-character2058%2F0&v=2_iSqg0rZ70
+class Solution:
+    def firstRep(self, s):
+        # code here
+        out={}
+        for char in s:
+            if char in out:
+                out[char]+=1
+            else:
+                out[char]=1
+        for key,val in out.items():
+            if val>1:
+                return key
+            else:
+                continue
+        return "#"
+#[Assignemnts]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbVd0dUJPS0VQZkVVX3U2TlJjOEljWHdxaWJTQXxBQ3Jtc0tuWWlVSXhaaTNEakZnMF9kZERjTExRNFZVYTVHLW9WSzdLWkRCb2ZZdHlsVWZhVkZSbS1wbG9oZGEwdDBDTkdyVXpJcDhPRTF0cGFzNGhJbEs3X2lvakpWSm1PWnI4SzB6RFo0cFJKY09mOHlXSzhscw&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Fnon-repeating-character-1587115620%2F1%3Fpage%3D1%26category%3DStrings%26difficulty%3DEasy%26status%3Dsolved%26sortBy%3Dsubmissions&v=2_iSqg0rZ70
+class Solution:
+    def nonRepeatingChar(self,s):
+        #code here
+        out={}
+        for char in s:
+            if char in out:
+                out[char]+=1
+            else:
+                out[char]=1
+        for key,val in out.items():
+            if val==1:
+                return key
+            else:
+                continue
+        return "$"
+########################################################Day11#####################################################################
+#[Problem Statement]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbDR2UTJ3eEVETlBwbGp1d3hoUGRTOWM0MlpZd3xBQ3Jtc0trQTdSVFdEM1AyQVBkaHFqbUFyRTNrYnFVRlVoUHczVkQ5bldsVHp1UzR6QVVCYVpGNTA4R2RRZVA4TXBrMFRucXpfZ3g2S3Qzb0xCN2pjdGp6MTl0NDNIdnJ6TWQ5T1lDSnl4V2FKRGVQSHgtMkdVRQ&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Fpeak-element%2F0&v=PMvvy2_SJJs
+class Solution:   
+    def peakElement(self, arr):
+        n = len(arr)
+        if n == 1:
+            return 0
+        if arr[0] >= arr[1]:
+            return 0
+        if arr[n - 1] >= arr[n - 2]:
+            return n - 1
+        
+        for i in range(1, n - 1):
+            if arr[i] >= arr[i - 1] and arr[i] >= arr[i + 1]:
+                return i
+#[Assignemnts]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbDBUREhzc2VvU0F4eWVVYmhKNXhneV9lcnloUXxBQ3Jtc0trNkVQczJfZGgzb1paY0pvZXcwcWpCTTBGVmpZNFJ0V2Y3eHBKcGp3cmVFeHJzVHc5aXV4RUx0eFEzamhSN1FfY3UyY21Rb0xFdmlQeXlDdzFlOFFhdXY1Y1JoSnJfelpQWERjR3lsbHFWLUZxTkd3RQ&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Ffind-minimum-and-maximum-element-in-an-array4428%2F0&v=PMvvy2_SJJs
+class Solution:
+    def get_min_max(self, arr):
+        if not arr:
+            return None, None  # or raise an exception
+        
+        max_val = arr[0]
+        min_val = arr[0]
+        
+        for num in arr:
+            if num > max_val:
+                max_val = num
+            if num < min_val:
+                min_val = num
+        
+        return min_val, max_val
+
+########################################################Day12#####################################################################
+#[Problem Statement]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbG42Y0Z2bnVOaGZWbV85RFNPdjg4djVzb0V2Z3xBQ3Jtc0trQU5pdUVBcGRoNEtiNi1iNHRPdU93cHNLVTR4NlJKeGpPMV9laU1XdmVPa0VoVi1qdUFqX1FkRWdNaGE3ZkxwdEx4ZnBNVTJHeXFNRXlSY05Oamp6QXk5eTlwSmVIbHY4eVE2ZkdKNVNJa3dOR3ljbw&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Fupper-case-conversion5419%2F0&v=V7S79qTqIMY
+class Solution:
+    def convert(self, s):
+        new_list=s.split()
+        ans=[]
+        for i in range(len(new_list)):
+            word=new_list[i]
+            char_up=word[0].upper()
+            new_word=char_up+word[1:]
+            ans.append(new_word)
+        return ' '.join(ans)
+
+
+#[Assignments]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbHp0TjdpYnlFandmNzd5VzhrU1c1Uy1IQnJHd3xBQ3Jtc0tuYkExbDVpOXB4YTU4MWRPalR6aFV1VnpnQlpURG52UnFkcktObXgtbDVKXzBVNTVwckZSanl5SExmaE5Sc2lDN1lzS2Jrc2gxU2lBQTZTdVhoRUNjdWFtVjBJOGt1TUZUWEpCVTBxaWJyVmxCOWw3UQ&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Fconvert-a-list-of-characters-into-a-string5142%2F0&v=V7S79qTqIMY
+class Solution:
+    def chartostr(self, arr,N):
+        # code here
+        new_string=""
+        for char in arr:
+            new_string+=char
+        return new_string
+########################################################Day13#####################################################################
+#[Problem Statement]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbldGWnRiRHBJSTBqSVY2VmhQeXl2d1NTbjM4UXxBQ3Jtc0tuWHJoa2RkeHJpY1FDNGZIRFB0d3E3RG9XQkNWdE00NVNncGhOenhDSGowejJPWTZzdnZIUWdQbWM1WWRleWhVamFHdEFIZ2xYQ0FXRmgxMzEtcklOVFJWN0xwMGNiRzNlMVVGZkpNZzlxVVh0RmlYOA&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Ffind-the-odd-occurence4820%2F1%3Fpage%3D1%26category%3DArrays%26difficulty%3DBasic%26status%3Dunsolved%26sortBy%3Dsubmissions&v=BfXQL-IElBs
+class Solution:
+    def getOddOccurrence(self, arr, n):
+        # code here 
+        dict={}
+        for num in arr:
+            if num not in dict:
+                dict[num]=1
+            else:
+                dict[num]=dict[num]+1
+        for key,val in dict.items():
+            if val%2!=0:
+                return key
+            else:
+                continue
+#[Assignments]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbkszTWFpQ1ZtZWd3YW9JME9MdG9sbWpIRGY5UXxBQ3Jtc0ttWjRqRnd6RG9mUFNBRkt3VkdUeXd0a3o0WktCSEN1azJURndHTnVCT29HN253TjRITkJJN2tFTzdYc1JXSnU0d3BpTTN5ZkxaZEpfbFM4aFktcE5xa1c1SVBvMmlPZGxGQndGdVYzRll6aUp2MDlmRQ&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Farray-insert-at-end%2F0&v=BfXQL-IElBs
+def insertAtEnd(arr,sizeOfArray,element):
+    ##Your code here
+    for i in range(len(arr)+1):
+        if i==sizeOfArray-1:
+            arr.append(element)
+        else:
+            continue
+    return arr
+#[Assignments]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa2hwODlKYnUxWWZub2NoSU1FZ0xPOVZYWFljZ3xBQ3Jtc0tsd3pvaVB6YkVFNU9OUjVpVzRuODBIQjQzT0dHMEU3U3VGanN5NjI4NzdULXMwc1hPVkR2ZlRWR2tLOWZtMFZPMDRQZHRtRDltb2l2LVhtQ1UyVnpLLUZMdmZKb3BiNUhwV3dDQzRQZEcyb2RFTWVqTQ&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Fsearch-an-element-in-an-array-1587115621--133819%2F0&v=BfXQL-IElBs
+class Solution:
+    #Complete the below function
+    def search(self,arr, x):
+        #Your code here
+        for i in range(len(arr)):
+            if x==arr[i]:
+                return i
+            else:
+                continue
+        return -1
+    
+########################################################Day14#####################################################################
+#[Problem Statement]:
+
+#[Assignments]:
+
+            
+########################################################Day15#####################################################################
+#[Problem Statement]:
+class Solution:
+    def printNos(self, n):
+        # Convert numbers to strings, then join them with spaces
+        output_string = ' '.join(map(str, range(1, n + 1)))
+        
+        # Print the string without a trailing newline
+        print(output_string, end='')
+#[Assignments]:
+class Solution:
+    def getAlternates(self, arr):
+        # Code Here
+        alternate_array=[]
+        for i in range(0,len(arr),2):
+            alternate_array.append(arr[i])
+        return alternate_array
+########################################################Day16#####################################################################
+#[Problem Statement]:
+
+#[Assignments]:
+
+########################################################Day17#####################################################################
+#[Problem Statement]:
+class Solution:
+    # Function to find values in array equal to their indices
+    def valueEqualToIndex(self, arr):
+        index_array=[]
+        for i in range(1,len(arr)+1):
+            if arr[i-1]==i:
+                index_array.append(arr[i-1])
+            else:
+                continue
+        return index_array
+#[Assignments]:
+class Solution:
+    def countOfElements(self, x, arr):
+        # Code Here
+        count=0
+        for i in range(len(arr)):
+            if arr[i]<=x:
+                count+=1
+            else:
+                continue
+        return count 
+########################################################Day18#####################################################################
+#[Problem Statement]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqblFFUWVpb2p0UkFSYjBSb05yVWppa243UUYyZ3xBQ3Jtc0tsOURCaWpubGVBSGdJandkX005cnRpM2VTNzVOcU9rRlNYNGwzejY2c1liNFJyMmk0ajMwbXBDcWN3TUVVMkdTWThmbGdVcF9kcVJraTg2OGdNRzVuQm5yWHBYZ041WXdKakQxbTd0ZFRBMlNiUzRRcw&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Fremove-vowels-from-string1446%2F0&v=Mqt4jxhj3UY
+class Solution:
+    def removeVowels(self, s):
+        # code here
+        new_string=''
+        vowels='aeiou'
+        for char in s:
+            if char in vowels:
+                continue
+            else:
+                new_string+=char
+        return new_string
+#[Assignments]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbS1XSzFhaGQ0cDFzMHFtb1RRSlBWTTVuVWR2Z3xBQ3Jtc0treVFIek5pc0xXVkMxdWJWSEVNMUM4cUktdUNvOFZFSDRUNTUyQThHUHR6V2JaMXpGSTFiMzhLTUFlejc3c1JMLUJFd21rUENqZWRBX2U1LWFCckVuQm5FNFNPNm5wOG5zeWNFVHJDZzJHeWNBZlIwcw&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Fremove-spaces0128%2F0&v=Mqt4jxhj3UY
+class Solution:
+    def modify(self, s):
+        # code here
+        new_string=''
+        space=' '
+        for char in s:
+            if char in space:
+                continue
+            else:
+                new_string+=char
+        return new_string
 
 
