@@ -507,5 +507,41 @@ class Solution:
             else:
                 new_string+=char
         return new_string
-
-
+########################################################Day19#####################################################################
+#[Problem Statement]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbU4xQ05TbU1QUkFnaTlhRW51VUNJeEhwWk1HZ3xBQ3Jtc0trT1ltSFV4bTd5RnhiSkhXZGVIcjQ2ekVVZklUN1ZMQ3NmVnl5N21uTmlzYVhmWTdoNDlhRDFfeFdKTmpIS3Q0akZwVmpEajNQaFljOTZSVGhQUXlCd2lxa2Z6ZUFpVHMyWHRzU1J1RUloZXpfTHg2MA&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Fsecond-largest3735%2F1%3Fpage%3D1%26category%3DArrays%26sortBy%3Dsubmissions&v=7azowOMpqGo
+class Solution:
+    def getSecondLargest(self, arr):
+        # Code Here
+        j = 1
+        lar = arr[0]
+        selar = -1
+        while j < len(arr):
+            if arr[j] > lar:
+                lar = arr[j]
+            j += 1
+        for i in arr:
+            if i < lar and i > selar:
+                selar = i
+        return selar
+#[Assignments]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbDhpSnQ0eTdyTVlIYjZNbU8yWUpyVUE0OXFYZ3xBQ3Jtc0trWGxjdG1NQlkxMlFQVTFEaHFlOThnSk5mRFBjMWg0V1FrY2w3N3FvUklyTkxGUnVvYzVVWEJoUlk2OHdzU0ZfOXoxaHRlXzJPZE1XNkF6V0xIRUNnYmY3Q3ZndEhraW5UOWRxeHhkalNyQjNQRTZuSQ&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Fneed-some-change%2F1%3Fpage%3D1%26category%3DArrays%26difficulty%3DEasy%26status%3Dsolved%26sortBy%3Dsubmissions&v=7azowOMpqGo
+class Solution:
+    def swapElements(self, arr):
+        #Code here
+        for i in range(len(arr)-2):
+            arr[i],arr[i+2]=arr[i+2],arr[i]
+        return arr	            
+########################################################Day20#####################################################################
+#[Problem Statement]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbnZzTHdCSTZzbkwxY1BVdV82a3o3Y0tYQUN5d3xBQ3Jtc0tuZ1BZN2tjLS1pNXhBZDAwWVdua0xzUWZfOTBGNlVrSkE1UG5jRWc4akZyV3Q4UkpmNmhBX0xxMEdBbFg4ZVdXZjJDbzc2VWpOR00wOHg3SkctVS1zU3NkeU5Xc2RsWXlWbXZfZDB3NDdwdGRRdjlKMA&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Fbinary-string-1587115620%2F0&v=26psHO1uXPE
+class Solution:
+    def binarySubstring(self,n,s):
+        #code here
+        count=0
+        for i in s:
+            if i=='1':
+                count=count+1
+        return count*(count-1)//2
+#[Assignments]:https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbEFMR2NBR2hIVE4yVVFzNkJVUmtHWUY4MDRRd3xBQ3Jtc0tsU19WbmlOOGt0VVc4OVlnT05nQXdzQ3hjRnhtcUZuSEthRm84cnNDTzNvV2MtZ2dyNFpiWml6YXV4eXBfS3QyLUV6ZlAwV2lVUWpNelExd0ZueURySThaTVRZUlJmTkk0dmthYVBmc2pyeWVrdlhwYw&q=https%3A%2F%2Fwww.geeksforgeeks.org%2Fproblems%2Flower-case-to-upper-case3410%2F0&v=26psHO1uXPE
+class Solution:
+    def to_upper(self, str):
+        # code here
+        return str.swapcase()
